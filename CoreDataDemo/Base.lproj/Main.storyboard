@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFD-7x-d6s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="L3Q-hS-MkS">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="tFD-7x-d6s" customClass="ViewController" customModule="CoreDataDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8uH-Jq-Tgv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZrI-9m-yz5">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Y5-Rz-EF3">
+                                <rect key="frame" x="20" y="114" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-ke-dhm">
+                                <rect key="frame" x="20" y="164" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-pG-0Ig">
+                                <rect key="frame" x="16" y="214" width="382" height="84"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="30O-yl-9PN">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1FA-Uj-Xxs">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="680-jf-5Ka">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="38"/>
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Save">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="saveButtonClicked:" destination="tFD-7x-d6s" eventType="touchUpInside" id="EBB-qH-GgG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-tq-dyh">
+                                                        <rect key="frame" x="195" y="0.0" width="187" height="38"/>
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Search">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="searchButtonClicked:" destination="tFD-7x-d6s" eventType="touchUpInside" id="dUF-eS-eRd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f41-64-3Qf">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="38"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qUZ-cW-oAe">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zws-QX-hps">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="38"/>
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Update">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="updateButtonClicked:" destination="tFD-7x-d6s" eventType="touchUpInside" id="k2w-sC-NsE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-nS-JQF">
+                                                        <rect key="frame" x="195" y="0.0" width="187" height="38"/>
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Delete">
+                                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="deleteButtonClicked:" destination="tFD-7x-d6s" eventType="touchUpInside" id="3jo-ud-x4z"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="bNB-at-Nfb"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfa-HD-z5U">
+                                <rect key="frame" x="20" y="327" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ANE-pO-bMH"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="5Y5-Rz-EF3" firstAttribute="top" secondItem="ZrI-9m-yz5" secondAttribute="bottom" constant="16" id="1X8-4D-lHq"/>
+                            <constraint firstItem="gy5-ke-dhm" firstAttribute="top" secondItem="5Y5-Rz-EF3" secondAttribute="bottom" constant="16" id="OeF-2n-voM"/>
+                            <constraint firstItem="ANE-pO-bMH" firstAttribute="trailing" secondItem="Qrh-pG-0Ig" secondAttribute="trailing" constant="16" id="Op5-8l-qfu"/>
+                            <constraint firstItem="ANE-pO-bMH" firstAttribute="trailing" secondItem="ZrI-9m-yz5" secondAttribute="trailing" constant="20" id="Uqi-KB-XeA"/>
+                            <constraint firstItem="Qrh-pG-0Ig" firstAttribute="top" secondItem="gy5-ke-dhm" secondAttribute="bottom" constant="16" id="W0i-ec-5ey"/>
+                            <constraint firstItem="ZrI-9m-yz5" firstAttribute="leading" secondItem="ANE-pO-bMH" secondAttribute="leading" constant="20" id="ihj-ml-Wgy"/>
+                            <constraint firstItem="Qrh-pG-0Ig" firstAttribute="leading" secondItem="ANE-pO-bMH" secondAttribute="leading" constant="16" id="lLU-JE-GfY"/>
+                            <constraint firstItem="ANE-pO-bMH" firstAttribute="trailing" secondItem="5Y5-Rz-EF3" secondAttribute="trailing" constant="20" id="n0H-VN-MLo"/>
+                            <constraint firstItem="ZrI-9m-yz5" firstAttribute="top" secondItem="ANE-pO-bMH" secondAttribute="top" constant="20" id="oQP-1L-0Ud"/>
+                            <constraint firstItem="5Y5-Rz-EF3" firstAttribute="leading" secondItem="ANE-pO-bMH" secondAttribute="leading" constant="20" id="vbo-Yo-3t4"/>
+                            <constraint firstItem="ANE-pO-bMH" firstAttribute="trailing" secondItem="gy5-ke-dhm" secondAttribute="trailing" constant="20" id="ycz-Z3-y9p"/>
+                            <constraint firstItem="gy5-ke-dhm" firstAttribute="leading" secondItem="ANE-pO-bMH" secondAttribute="leading" constant="20" id="zGu-63-7IR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="5Y5-Rz-EF3" id="U9j-GN-7dM"/>
+                        <outlet property="deleteButton" destination="0rf-nS-JQF" id="xVo-8Z-159"/>
+                        <outlet property="messageLabel" destination="Mfa-HD-z5U" id="nFC-tm-F7X"/>
+                        <outlet property="nameTextField" destination="ZrI-9m-yz5" id="HnC-t6-7Vz"/>
+                        <outlet property="salaryTextField" destination="gy5-ke-dhm" id="K4F-1u-w3P"/>
+                        <outlet property="saveButton" destination="680-jf-5Ka" id="Ifp-EY-wJP"/>
+                        <outlet property="searchButton" destination="GaU-tq-dyh" id="dCS-s5-Eha"/>
+                        <outlet property="updateButton" destination="zws-QX-hps" id="1Bm-Ru-dbA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQB-bg-0fQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
